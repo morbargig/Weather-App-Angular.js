@@ -4,13 +4,9 @@
   "description": "This is the repository for my course Learning AngularJS. The full course is available on [LinkedIn Learning](https://www.linkedin.com/learning/learning-angularjs-1-2?trk=insiders_6787408_learning) and [Lynda.com](https://www.lynda.com/Angular-tutorials/Learning-AngularJS-1/648940-2.html)",
   "main": "gulpfile.js",
   "dependencies": {
-  
+    "browser-sync": "^2.26.7",
     "gulp": "^4.0.2"
   },
-  "engines": {
-    "node": "0.12.2"
-  },
-  "devDependencies": {},
   "scripts": {
     "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,0 +1,13 @@
+{
+  "name": "angular",
+  "version": "1.0.0",
+  "description": "This is the repository for my course Learning AngularJS. The full course is available on [LinkedIn Learning](https://www.linkedin.com/learning/learning-angularjs-1-2?trk=insiders_6787408_learning) and [Lynda.com](https://www.lynda.com/Angular-tutorials/Learning-AngularJS-1/648940-2.html)",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

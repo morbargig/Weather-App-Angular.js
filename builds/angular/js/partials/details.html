@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12 mt-3">
+          <div class="card">
+            <div class="card-header d-flex align-items-start justify-content-between">
+              <h1 class="card-title my-0">{{city.city.name}}</h1>
+              <nav class="btn-group">
+                <a class="btn btn-sm btn-secondary" 
+                  href="#/">&bull;</a>
+              </nav>
+            </div
+            >
+            <div class="card-body" ng-repeat="item in next6days"
+              ng-model="artists">
+              <hr>
+              <h4 class="card-title text-dark mt-0">{{item.dt_txt.slice(0,10)}}</h4>
+              <div class="card-text text-secondary">{{ item.main.temp - 273   }} °</div>
+              <div class="card-text text-secondary">{{item.weather[0].main }} <span>{{item.weather[0].description }}</span></div>
+              <img class="float-left mr-2 rounded"
+                ng-src="http://openweathermap.org/img/wn/{{item.weather[0].icon}}@2x.png"
+                alt="">
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>

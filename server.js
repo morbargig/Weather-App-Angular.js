@@ -14,14 +14,14 @@ app.use(function (req, res, next) {
 })
 
 
-app.use(express.static(path.join(__dirname, 'builds')))
+// app.use(express.static(path.join(__dirname, 'builds')))
 
 
 
 
-app.get('*', function (req, res) {
-	res.sendFile(path.join(__dirname, 'builds', 'index.html'))
-})
+// app.get('*', function (req, res) {
+	// res.sendFile(path.join(__dirname, 'builds', 'index.html'))
+// })
 
 app.get('/', function (req, res) {
 	res.sendFile(path.join(__dirname, 'index.html'));

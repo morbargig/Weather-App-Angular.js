@@ -28,28 +28,17 @@ myControllers.controller('SearchController',
     { name: "Beijing", country: "CN", id: 1816670 },
     { name: "Brasilia", country: "BR", id: 3459342 },
     { name: "Canberra", country: "AU", id: 2172517 },
-    
-    
-    
-    
-    
-    
-    
-    
-    
     { name: "Jerusalem", country: "PS", id: 281184 }
-  ];
+    ];
     $scope.citiesOrder = 'city';
-    // });
-    // }
   });
 
 myControllers.controller('DetailsController',
   function MyController($scope, $http, $routeParams) {
-    console.log((43 * 34) -98 )
-    console.log($routeParams.itemId)
+    // console.log((43 * 34) - 98)
+    // console.log($routeParams.itemId)
     $http.get(`
-    http://api.openweathermap.org//data/2.5/forecast?id=${$routeParams.itemId}&appid=4d725b2f41f2c98eca468ee939737fcb
+    https://api.openweathermap.org//data/2.5/forecast?id=${$routeParams.itemId}&appid=4d725b2f41f2c98eca468ee939737fcb
     `).then(function (response) {
       // console.log(response.data.list)
       let myWhater = []
@@ -59,23 +48,8 @@ myControllers.controller('DetailsController',
           myWhater.push(i)
         }
       }
-      console.log(myWhater)
-
+      // console.log(myWhater)
       $scope.city = response.data;
       $scope.next6days = myWhater;
-
-
-      // if ($routeParams.itemId > 0) {
-      //   $scope.prevItem = Number($routeParams.itemId) - 1;
-      // } else {
-      //   $scope.prevItem = $scope.artists.length - 1;
-      // }
-
-      // if ($routeParams.itemId < $scope.artists.length - 1) {
-      //   $scope.nextItem = Number($routeParams.itemId) + 1;
-      // } else {
-      //   $scope.nextItem = 0;
-      // }
-
     });
   });

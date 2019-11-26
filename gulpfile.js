@@ -23,6 +23,7 @@ function watch() {
 function server() {
   browserSync.init({
     notify: false,
+    port : process.env.PORT || 3003 ,
     server: {
       baseDir: source
     }
